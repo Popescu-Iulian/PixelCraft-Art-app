@@ -49,7 +49,11 @@
 			>
 		</section>
 
-		<input type="color" id="color" />
+		<p>Select a color</p>
+		<input type="color" oninput="clearUserColors()" id="browser-colors" />
+
+		<p>or enter one (name, hex, rgb, hsl...)</p>
+		<input type="text" id="user-colors" />
 
 		<table border="1"></table>
 	</body>
