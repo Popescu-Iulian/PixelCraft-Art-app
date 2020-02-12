@@ -1,0 +1,21 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table td {
+	height: 1.2rem;
+	width: 1.2rem;
+}
+
+h3,
+section,
+#color,
+table {
+	margin: 1rem;
+}
