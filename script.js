@@ -1,6 +1,7 @@
-const TABLE = document.createElement('TABLE');
 const BROWSER_COLORS = document.getElementById('browser-colors');
 const USER_COLORS = document.getElementById('user-colors');
+const TDS = document.getElementsByTagName('td');
+const TABLE = document.createElement('TABLE');
 
 function drawTable(idx) {
   document.querySelector('body').appendChild(TABLE);
@@ -39,8 +40,6 @@ function clearUserColors() {
 }
 
 function screenshotHelper() {
-  const TDS = document.querySelectorAll('td');
-
   for (let i = 0; i < TDS.length; i++) {
     TDS[i].classList.toggle('remove-borders');
     TABLE.classList.toggle('remove-borders');
