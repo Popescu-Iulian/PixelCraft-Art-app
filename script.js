@@ -1,10 +1,9 @@
-const BODY = document.querySelector('body');
 const TABLE = document.createElement('TABLE');
 const BROWSER_COLORS = document.getElementById('browser-colors');
 const USER_COLORS = document.getElementById('user-colors');
 
 function drawTable(idx) {
-  BODY.appendChild(TABLE);
+  document.querySelector('body').appendChild(TABLE);
   TABLE.setAttribute('border', '1');
 
   BROWSER_COLORS.value = '';
@@ -36,5 +35,14 @@ function applyColor(event) {
 function clearUserColors() {
   if (USER_COLORS.value !== '') {
     USER_COLORS.value = '';
+  }
+}
+
+function screenshotHelper() {
+  const TDS = document.querySelectorAll('td');
+
+  for (let i = 0; i < TDS.length; i++) {
+    TDS[i].classList.toggle('remove-borders');
+    TABLE.classList.toggle('remove-borders');
   }
 }

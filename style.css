@@ -12,3 +12,7 @@ table td {
 	height: 1.2rem;
 	width: 1.2rem;
 }
+
+.remove-borders {
+	border: hidden;
+}
