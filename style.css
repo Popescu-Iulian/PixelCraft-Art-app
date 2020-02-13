@@ -1,11 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Asap+Condensed:400,500,600|Permanent+Marker&display=swap');
+
 * {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
 
+body {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: url('images/background.jpg') no-repeat center center fixed;
+	background-size: cover;
+	font-family: 'Asap Condensed', sans-serif;
+}
+
+h1 {
+	font-family: 'Permanent Marker', cursive;
+}
+
 table {
 	border-collapse: collapse;
+	background-color: white;
 }
 
 table td {
