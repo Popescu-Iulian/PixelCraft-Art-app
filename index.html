@@ -8,58 +8,50 @@
 		<title>PixelCraft Art</title>
 	</head>
 	<body onload="drawTable(8)">
-		<h1>PixelCraft Art</h1>
+		<div id="container">
+			<h1>PixelCraft Art</h1>
 
-		<h3>Pick a table size:</h3>
+			<section id="size-inputs">
+				<h3>Pick a table size:</h3>
 
-		<section>
-			<label for="eight"
-				><input
-					id="eight"
-					name="canvas-size"
-					type="radio"
-					onclick="drawTable(8)"
-					checked
-				/>
-				08 x 08</label
+				<label
+					><input
+						name="canvas-size"
+						type="radio"
+						onclick="drawTable(8)"
+						checked
+					/>
+					08 x 08</label
+				>
+				<label
+					><input name="canvas-size" type="radio" onclick="drawTable(12)" /> 12
+					x 12</label
+				>
+				<label
+					><input name="canvas-size" type="radio" onclick="drawTable(16)" /> 16
+					x 16</label
+				>
+				<label
+					><input name="canvas-size" type="radio" onclick="drawTable(32)" /> 32
+					x 32</label
+				>
+			</section>
+
+			<button
+				id="screenshot-helper"
+				onclick="screenshotHelper()"
+				title="removes table borders to take a manual screenshot of you beautiful art"
 			>
-			<label for="twelve"
-				><input
-					id="twelve"
-					name="canvas-size"
-					type="radio"
-					onclick="drawTable(12)"
-				/>
-				12 x 12</label
-			>
-			<label for="sixteen"
-				><input
-					id="sixteen"
-					name="canvas-size"
-					type="radio"
-					onclick="drawTable(16)"
-				/>
-				16 x 16</label
-			>
-			<label for="thirtytwo"
-				><input
-					id="thirtytwo"
-					name="canvas-size"
-					type="radio"
-					onclick="drawTable(32)"
-				/>
-				32 x 32</label
-			>
-		</section>
+				Screenshot helper
+			</button>
 
-		<button id="screenshot-helper" onclick="screenshotHelper()">
-			Screenshot helper
-		</button>
+			<section id="color-pickers">
+				<label for="browser-colors">Select a color</label>
+				<input id="browser-colors" type="color" oninput="clearUserColors()" />
 
-		<p>Select a color</p>
-		<input type="color" oninput="clearUserColors()" id="browser-colors" />
-
-		<p>or enter one</p>
-		<input type="text" id="user-colors" placeholder="name, hex, rgb, hsl..." />
+				<label for="user-colors">or write one</label>
+				<input id="user-colors" placeholder="name, hex, rgb, hsl..." />
+			</section>
+		</div>
 	</body>
 </html>

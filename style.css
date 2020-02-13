@@ -1,3 +1,4 @@
+/* === GENERAL === */
 @import url('https://fonts.googleapis.com/css?family=Asap+Condensed:400,500,600|Permanent+Marker&display=swap');
 
 * {
@@ -14,22 +15,108 @@ body {
 	background: url('images/background.jpg') no-repeat center center fixed;
 	background-size: cover;
 	font-family: 'Asap Condensed', sans-serif;
+	color: white;
 }
 
+#container {
+	text-align: center;
+}
+
+/* === TITLE === */
 h1 {
 	font-family: 'Permanent Marker', cursive;
+	font-size: 3rem;
+	letter-spacing: 4px;
+	word-spacing: 7px;
+	/* color: white; */
+	background: linear-gradient(to top, #a1921b, #33a705);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	margin: 3rem 0;
 }
 
+/* === SIZE INPUTS === */
+#size-inputs h3 {
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+}
+
+#size-inputs label {
+	display: block;
+	margin-bottom: 5px;
+	letter-spacing: 3px;
+}
+
+#size-inputs label:hover {
+	font-size: 1.2rem;
+	color: lightcoral;
+}
+
+#size-inputs label:last-child {
+	margin-bottom: 1.7rem;
+}
+
+/* === SCREENSHOT HELPER === */
+#screenshot-helper {
+	font-weight: bold;
+	letter-spacing: 1px;
+	background-color: lightgreen;
+	border-radius: 5px;
+	padding: 5px 15px;
+	outline: none;
+	margin-bottom: 1.7rem;
+}
+
+#screenshot-helper:hover {
+	background-color: lightseagreen;
+}
+
+/* === COLOR PICKERS === */
+#color-pickers label {
+	display: block;
+	font-size: 1.5rem;
+	margin-bottom: 5px;
+}
+
+#color-pickers input {
+	margin-bottom: 7px;
+}
+
+#color-pickers input:last-child {
+	margin-bottom: 2rem;
+}
+
+#browser-colors {
+	width: 3.5rem;
+	height: 1.7rem;
+}
+
+#color-pickers [for='user-colors'] {
+	font-size: 1.2rem;
+	letter-spacing: 1px;
+}
+
+/* === TABLE === */
 table {
 	border-collapse: collapse;
 	background-color: white;
+	cursor: pointer;
+	margin-bottom: 3rem;
 }
 
 table td {
-	height: 1.2rem;
-	width: 1.2rem;
+	height: 1.3rem;
+	width: 1.3rem;
 }
 
 .remove-borders {
 	border: hidden;
+}
+
+/* === MEDIA QUERIES === */
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1024px) {
 }
