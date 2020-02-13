@@ -28,11 +28,12 @@ h1 {
 	font-size: 3rem;
 	letter-spacing: 4px;
 	word-spacing: 0.6rem;
-	background: linear-gradient(to top, #a1921b, #33a705);
+	background: linear-gradient(to top, #eeda22, #164403);
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	padding: 3rem 0.5rem;
+	width: 100vw;
 }
 
 /* === SIZE INPUTS === */
@@ -127,6 +128,7 @@ table td {
 		font-size: 2rem;
 		margin-bottom: 0.7rem;
 		letter-spacing: 2px;
+		word-spacing: 4px;
 	}
 
 	#size-inputs label {
@@ -154,6 +156,7 @@ table td {
 		display: block;
 		font-size: 1.8rem;
 		margin-bottom: 0.7rem;
+		word-spacing: 5px;
 	}
 
 	#color-pickers input {
@@ -167,7 +170,7 @@ table td {
 
 	#color-pickers [for='user-colors'] {
 		font-size: 1.4rem;
-		letter-spacing: 2px;
+		letter-spacing: 1px;
 	}
 
 	#color-pickers input:last-child {
@@ -188,4 +191,70 @@ table td {
 }
 
 @media (min-width: 1024px) {
+	/* === TITLE === */
+	h1 {
+		font-size: 5.5rem;
+		padding: 6rem 0.5rem 8rem;
+	}
+
+	/* === SIZE INPUTS === */
+	#size-inputs h3 {
+		font-size: 3rem;
+		margin-bottom: 1rem;
+		letter-spacing: 4px;
+	}
+
+	#size-inputs label {
+		padding: 1.1rem;
+		font-size: 1.5rem;
+	}
+
+	#size-inputs label:hover {
+		font-size: 1.7rem;
+	}
+
+	/* === SCREENSHOT HELPER === */
+	#screenshot-helper {
+		border-radius: 7px;
+		padding: 1rem 1.5rem;
+		font-size: 1.1rem;
+		margin: 4.5rem 0;
+	}
+
+	/* === COLOR PICKERS === */
+	#color-pickers label {
+		font-size: 2.5rem;
+		margin-bottom: 0.7rem;
+		word-spacing: 7px;
+		letter-spacing: 3px;
+	}
+
+	#color-pickers input {
+		margin-bottom: 1.2rem;
+	}
+
+	#browser-colors {
+		width: 6rem;
+		height: 3rem;
+	}
+
+	#color-pickers [for='user-colors'] {
+		font-size: 2rem;
+		letter-spacing: 2px;
+	}
+
+	#color-pickers input:last-child {
+		margin-bottom: 4rem;
+		font-size: 1.2rem;
+	}
+
+	/* === TABLE === */
+	table {
+		margin-bottom: 7rem;
+	}
+
+	table td {
+		width: 2rem;
+		height: 2rem;
+	}
 }
