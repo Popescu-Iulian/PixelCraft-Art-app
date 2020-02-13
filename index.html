@@ -17,6 +17,7 @@
 					name="canvas-size"
 					type="radio"
 					onclick="drawTable(8)"
+					checked
 				/>
 				08 x 08</label
 			>
@@ -52,9 +53,7 @@
 		<p>Select a color</p>
 		<input type="color" oninput="clearUserColors()" id="browser-colors" />
 
-		<p>or enter one (name, hex, rgb, hsl...)</p>
-		<input type="text" id="user-colors" />
-
-		<table border="1"></table>
+		<p>or enter one</p>
+		<input type="text" id="user-colors" placeholder="name, hex, rgb, hsl..." />
 	</body>
 </html>
