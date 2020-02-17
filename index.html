@@ -8,49 +8,59 @@
 		<title>PixelCraft Art</title>
 	</head>
 	<body onload="drawTable(8)">
-		<div id="container">
-			<h1>PixelCraft Art</h1>
+		<div id="wrapper">
+			<div id="title">
+				<h1>PixelCraft Art</h1>
+			</div>
 
-			<section id="size-inputs">
-				<h3>Pick a table size:</h3>
+			<div id="user-settings">
+				<section id="size-inputs">
+					<h3>Pick a table size:</h3>
 
-				<label
-					><input
-						name="canvas-size"
-						type="radio"
-						onclick="drawTable(8)"
-						checked
-					/>
-					08 x 08</label
-				>
-				<label
-					><input name="canvas-size" type="radio" onclick="drawTable(12)" /> 12
-					x 12</label
-				>
-				<label
-					><input name="canvas-size" type="radio" onclick="drawTable(16)" /> 16
-					x 16</label
-				>
-				<label
-					><input name="canvas-size" type="radio" onclick="drawTable(32)" /> 32
-					x 32</label
-				>
-			</section>
+					<label
+						><input
+							name="canvas-size"
+							type="radio"
+							onclick="drawTable(8)"
+							checked
+						/>
+						08x08</label
+					>
+					<label
+						><input name="canvas-size" type="radio" onclick="drawTable(12)" />
+						12x12</label
+					>
+					<label
+						><input name="canvas-size" type="radio" onclick="drawTable(16)" />
+						16x16</label
+					>
+					<label
+						><input name="canvas-size" type="radio" onclick="drawTable(32)" />
+						32x32</label
+					>
+				</section>
 
-			<button
-				id="screenshot-helper"
-				onclick="screenshotHelper()"
-				title="removes table borders to take a manual screenshot of your beautiful art"
-			>
-				Screenshot helper
-			</button>
+				<button
+					id="screenshot-helper"
+					onclick="screenshotHelper()"
+					title="removes table borders to take a manual screenshot of your beautiful art"
+				>
+					Screenshot helper
+				</button>
 
-			<section id="color-pickers">
-				<label for="browser-colors">Select a color</label>
-				<input id="browser-colors" type="color" oninput="clearUserColors()" />
-				<label for="user-colors">or write one</label>
-				<input id="user-colors" placeholder="name, hex, rgb, hsl..." />
-			</section>
+				<section id="color-pickers">
+					<label for="browser-colors">Select a color</label>
+					<input id="browser-colors" type="color" oninput="clearUserColors()" />
+					<label for="user-colors">or write one</label>
+					<input id="user-colors" placeholder="name, hex, rgb, hsl..." />
+				</section>
+			</div>
+
+			<div id="table-art">
+				<table border="1">
+					<tbody></tbody>
+				</table>
+			</div>
 		</div>
 	</body>
 </html>

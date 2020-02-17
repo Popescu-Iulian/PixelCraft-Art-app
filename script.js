@@ -1,12 +1,9 @@
 const BROWSER_COLORS = document.getElementById('browser-colors');
 const USER_COLORS = document.getElementById('user-colors');
 const TDS = document.getElementsByTagName('td');
-const TABLE = document.createElement('TABLE');
+const TABLE = document.querySelector('table tbody');
 
 function drawTable(idx) {
-  document.querySelector('body').appendChild(TABLE);
-  TABLE.setAttribute('border', '1');
-
   BROWSER_COLORS.value = '';
   let elements = '';
 

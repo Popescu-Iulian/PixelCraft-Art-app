@@ -8,60 +8,78 @@
 }
 
 body {
+	display: flex;
+	justify-content: center;
 	align-items: center;
+	height: 100vh;
 	background: url('images/background.jpg') no-repeat center center fixed;
 	background-size: cover;
 	font-family: 'Asap Condensed', sans-serif;
 	color: white;
 }
 
-#container {
+#wrapper {
+	width: 90vw;
+	height: 90vh;
 	text-align: center;
+	overflow: hidden;
+}
+
+/* === CONTAINERS DIMENSIONS === */
+#title {
+	width: 100%;
+	height: 13%;
+	float: left;
+}
+
+#user-settings {
+	width: 100%;
+	height: 37%;
+	float: left;
+}
+
+#table-art {
+	width: 100%;
+	height: 50%;
+	float: left;
+	position: relative;
+	background-color: white;
 }
 
 /* === TITLE === */
-h1 {
-	font-family: 'Permanent Marker', cursive;
-	font-size: 3rem;
+#title h1 {
+	font-size: 2.3rem;
 	letter-spacing: 4px;
-	word-spacing: 0.6rem;
-	background: linear-gradient(to top, #ffe606, #0d2701);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	padding: 3rem 0.5rem;
 }
 
 /* === SIZE INPUTS === */
 #size-inputs h3 {
 	font-size: 1.5rem;
-	margin-bottom: 0.7rem;
+	padding: 0.3rem 0;
+}
+
+#size-inputs {
+	padding-bottom: 0.7rem;
 }
 
 #size-inputs label {
-	display: block;
-	margin-bottom: 5px;
-	letter-spacing: 3px;
+	padding: 0 0.3rem;
+	cursor: pointer;
 }
 
 #size-inputs label:hover {
-	font-size: 1.2rem;
 	color: lightcoral;
-}
-
-#size-inputs label:last-child {
-	margin-bottom: 1.7rem;
 }
 
 /* === SCREENSHOT HELPER === */
 #screenshot-helper {
 	font-weight: bold;
 	letter-spacing: 1px;
-	background-color: lightgreen;
+	padding: 2px 4px;
+	border: 1px solid lightblue;
 	border-radius: 5px;
-	padding: 5px 15px;
+	background-color: lightgreen;
 	outline: none;
-	margin-bottom: 1.7rem;
 }
 
 #screenshot-helper:hover {
@@ -71,37 +89,28 @@ h1 {
 /* === COLOR PICKERS === */
 #color-pickers label {
 	display: block;
-	font-size: 1.5rem;
-	margin-bottom: 5px;
+	font-size: 1.2rem;
 }
 
-#color-pickers input {
-	margin-bottom: 0.4rem;
+#color-pickers [for='browser-colors'] {
+	padding-top: 0.7rem;
 }
 
 #browser-colors {
 	width: 3.5rem;
-	height: 1.7rem;
+	height: 1.5rem;
 }
 
 #color-pickers [for='user-colors'] {
-	font-size: 1.2rem;
+	font-size: 1rem;
 	letter-spacing: 1px;
 }
 
 /* === TABLE === */
 table {
 	border-collapse: collapse;
-	background-color: white;
-	cursor: pointer;
-	margin-bottom: 3rem;
-	max-width: 90%;
-	margin: 1rem auto 2rem;
-}
-
-table td {
-	width: 1.2rem;
-	height: 1.2rem;
+	width: 100%;
+	height: 100%;
 }
 
 .remove-borders {
@@ -110,144 +119,124 @@ table td {
 
 /* === MEDIA QUERIES === */
 @media (min-width: 768px) {
+	/* === GENERAL === */
+	#wrapper {
+		width: 70vw;
+		height: 90vh;
+	}
+
+	/* === CONTAINERS DIMENSIONS === */
+	#title {
+		height: 9%;
+	}
+
+	#user-settings {
+		height: 35%;
+	}
+
+	#table-art {
+		width: 60%;
+		top: 6%;
+		left: calc(70vw - 80%);
+	}
+
 	/* === TITLE === */
-	h1 {
-		font-size: 4.5rem;
-		padding: 4rem 0.5rem 6rem;
+	#title h1 {
+		font-size: 3.3rem;
+		word-spacing: 10px;
 	}
 
 	/* === SIZE INPUTS === */
 	#size-inputs h3 {
 		font-size: 2rem;
-		margin-bottom: 0.7rem;
-		letter-spacing: 2px;
-		word-spacing: 4px;
+		padding: 2rem 0 0.3rem;
+		letter-spacing: 1px;
+	}
+
+	#size-inputs {
+		padding-bottom: 1.5rem;
 	}
 
 	#size-inputs label {
-		display: inline;
-		padding: 0.8rem;
-		letter-spacing: 3px;
-		font-size: 1.2rem;
-	}
-
-	#size-inputs label:hover {
-		font-size: 1.4rem;
+		padding: 0 1rem;
+		letter-spacing: 4px;
 	}
 
 	/* === SCREENSHOT HELPER === */
 	#screenshot-helper {
-		letter-spacing: 1px;
-		border-radius: 5px;
-		padding: 0.7rem 1.2rem;
-		font-size: 0.9rem;
-		margin: 3rem 0;
+		padding: 3px 10px;
 	}
 
 	/* === COLOR PICKERS === */
 	#color-pickers label {
-		display: block;
-		font-size: 1.8rem;
-		margin-bottom: 0.7rem;
-		word-spacing: 5px;
+		font-size: 1.7rem;
+		letter-spacing: 1px;
 	}
 
-	#color-pickers input {
-		margin-bottom: 1rem;
+	#color-pickers [for='browser-colors'] {
+		padding-top: 1rem;
 	}
 
 	#browser-colors {
-		width: 4rem;
-		height: 2rem;
+		width: 3.5rem;
+		height: 1.3rem;
 	}
 
 	#color-pickers [for='user-colors'] {
 		font-size: 1.4rem;
-		letter-spacing: 1px;
+		padding-top: 0.5rem;
 	}
 
 	#color-pickers input:last-child {
 		width: 30%;
-		font-size: 1rem;
-	}
-
-	/* === TABLE === */
-	table {
-		margin-bottom: 5rem;
-	}
-
-	table td {
-		width: 1.5rem;
-		height: 1.5rem;
+		font-size: 0.8rem;
 	}
 }
 
 @media (min-width: 1024px) {
+	/* === GENERAL === */
+	#wrapper {
+		height: 92vh;
+	}
+
+	/* === CONTAINERS DIMENSIONS === */
+	#title {
+		height: 9%;
+	}
+
+	#table-art {
+		top: 6%;
+	}
+
 	/* === TITLE === */
-	h1 {
-		font-size: 5.5rem;
-		padding: 6rem 0.5rem 8rem;
+	#title h1 {
+		font-size: 4rem;
 	}
 
 	/* === SIZE INPUTS === */
 	#size-inputs h3 {
-		font-size: 3rem;
-		margin-bottom: 1rem;
-		letter-spacing: 4px;
-	}
-
-	#size-inputs label {
-		padding: 1.1rem;
-		font-size: 1.5rem;
-	}
-
-	#size-inputs label:hover {
-		font-size: 1.7rem;
-	}
-
-	/* === SCREENSHOT HELPER === */
-	#screenshot-helper {
-		border-radius: 7px;
-		padding: 1rem 1.5rem;
-		font-size: 1.1rem;
-		margin: 4.5rem 0;
-		letter-spacing: 2px;
-	}
-
-	/* === COLOR PICKERS === */
-	#color-pickers label {
-		font-size: 2.5rem;
-		margin-bottom: 0.7rem;
-		word-spacing: 7px;
+		font-size: 2.2rem;
+		padding: 2rem 0 0.3rem;
 		letter-spacing: 3px;
 	}
 
-	#color-pickers input {
-		margin-bottom: 1.2rem;
+	#size-inputs {
+		padding-bottom: 1.7rem;
 	}
 
+	#size-inputs label {
+		padding: 0 1.5rem;
+		letter-spacing: 6px;
+	}
+
+	/* === COLOR PICKERS === */
 	#browser-colors {
-		width: 6rem;
-		height: 3rem;
-	}
-
-	#color-pickers [for='user-colors'] {
-		font-size: 2rem;
-		letter-spacing: 2px;
+		width: 4rem;
+		height: 1.4rem;
 	}
 
 	#color-pickers input:last-child {
-		margin-bottom: 3rem;
-		font-size: 1.2rem;
-	}
-
-	/* === TABLE === */
-	table {
-		margin-bottom: 7rem;
-	}
-
-	table td {
-		width: 2rem;
-		height: 2rem;
+		width: 40%;
+		font-size: 0.9rem;
 	}
 }
