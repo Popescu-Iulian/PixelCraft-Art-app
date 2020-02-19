@@ -29,21 +29,18 @@ body {
 #title {
 	width: 100%;
 	height: 13%;
-	float: left;
 }
 
 #user-settings {
 	width: 100%;
 	height: 37%;
-	float: left;
 }
 
 #table-art {
 	width: 100%;
 	height: 50%;
-	float: left;
 	position: relative;
-	background-color: white;
+	margin: 0 auto;
 }
 
 /* === TITLE === */
@@ -111,6 +108,7 @@ table {
 	border-collapse: collapse;
 	width: 100%;
 	height: 100%;
+	background-color: white;
 }
 
 .remove-borders {
@@ -137,7 +135,6 @@ table {
 	#table-art {
 		width: 60%;
 		top: 6%;
-		left: calc(70vw - 80%);
 	}
 
 	/* === TITLE === */
